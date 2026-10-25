@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>WebScanner</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container hero">
+      <div class="hero-pill">Projet d’audit web</div>
+      <h1>WebScanner</h1>
+      <p class="tagline">Plateforme d'audit de sécurité web</p>
+      <p class="hero-text">
+        Une solution simple pour analyser rapidement la sécurité d’un site web, 
+avec une détection intelligente et des rapports clairs et exploitables.
+      </p>
+    </div>
+  </header>
+
+  <main class="container main-layout">
+    <section class="card">
+      <div class="section-top">
+        <span class="section-chip">Présentation</span>
+        <h2>À propos du projet</h2>
+      </div>
+      <p>
+        Ce projet a pour objectif de simuler un audit de sécurité web à travers une approche simple et structurée. 
+Après validation de l’autorisation, le système analyse la cible, identifie son type automatiquement 
+ou selon le choix de l’utilisateur, puis applique un ensemble d’outils adaptés.
+
+Les résultats sont ensuite organisés dans un rapport clair contenant les informations essentielles, 
+afin de faciliter la compréhension des points observés et des éventuelles améliorations à apporter.
+    </section>
+
+    <section class="card">
+      <div class="section-top">
+        <span class="section-chip">Configuration</span>
+        <h2>Démarrer un scan</h2>
+      </div>
+
+      <form id="scanForm">
+        <div class="form-row single">
+          <div class="field">
+            <label for="url">URL </label>
+            <input id="url" type="url" placeholder="https://example.com" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="mode">Mode de scan</label>
+            <select id="mode">
+              <option value="normal">Normal</option>
+              <option value="advanced">Avancé</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="targetMode">Choix du type</label>
+            <select id="targetMode">
+              <option value="auto">Automatique</option>
+              <option value="manual">Manuel</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="manualTypeWrapper" class="form-row single" style="display:none">
+          <div class="field">
+            <label for="targetType">Type de cible</label>
+            <select id="targetType">
+              <option value="generic">Site web générique</option>
+              <option value="api">API</option>
+              <option value="wordpress">WordPress</option>
+            </select>
+          </div>
+        </div>
+
+        <label class="check-row">
+          <input id="authorized" type="checkbox">
+          <span>Je confirme que cette cible m'appartient ou que j'ai l'autorisation explicite de la scanner.</span>
+        </label>
+
+        <div class="actions">
+          <button type="submit">Lancer le scan</button>
+          <button type="button" id="clearBtn" class="secondary">Effacer</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card" id="resultCard" style="display:none">
+      <div class="section-top">
+        <span class="section-chip">Résultats</span>
+        <h2>Résultat du scan</h2>
+      </div>
+
+      <div class="result-grid">
+        <div class="score-panel">
+          <div class="score-wrapper">
+            <div class="score-circle" id="scoreCircle" style="--score: 0; --color: #6b8f71;">
+              <div class="score-inner">
+                <span id="scoreValue">0%</span>
+                <small id="scoreLabel">Pending</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="status-panel">
+          <div id="statusInfo"></div>
+
+          <div id="findingsList" style="display:none"></div>
+
+          <div class="actions report-actions">
+            <a id="reportLink" class="button" target="_blank" style="display:none">Ouvrir le rapport HTML</a>
+            <a id="pdfReportLink" class="button secondary" target="_blank" style="display:none">Télécharger le PDF</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">WebScanner  Projet étudiant</div>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

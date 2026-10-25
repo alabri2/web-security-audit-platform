@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#15212e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3fb950"/>
+      <stop offset="1" stop-color="#2dd4bf"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.04"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="300" fill="url(#bg)"/>
+  <rect width="1200" height="300" fill="url(#grid)"/>
+  <rect x="80" y="70" width="8" height="160" fill="url(#accent)"/>
+  <text x="115" y="150" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="76" font-weight="900" letter-spacing="2" fill="#ffffff">Web Security Scanner</text>
+  <text x="118" y="196" font-family="Consolas, monospace" font-size="22" fill="url(#accent)" letter-spacing="1">Automated web vulnerability audit · FastAPI orchestrator</text>
+  <text x="118" y="232" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" fill="#8b949e">12 security tools · auto target detection · ANSSI-based scoring · HTML &amp; PDF reports</text>
+  <g transform="translate(1035 150)" fill="none" stroke="url(#accent)" stroke-width="5">
+    <circle r="72" stroke-opacity="0.30"/>
+    <path d="M0 -72 A72 72 0 0 1 62 36" stroke-linecap="round"/>
+    <path d="M-28 2 l18 18 l34 -40" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
