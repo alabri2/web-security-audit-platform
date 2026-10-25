@@ -22,7 +22,7 @@ A security auditor normally has to run many tools by hand, read each raw output,
 
 The whole system follows a strict **White-Hat** approach: it only performs non-intrusive checks, requires the user to confirm authorization before any scan, and rate-limits itself to avoid any involuntary denial of service on the target.
 
-> 🎓 University project — **SAÉ 4.CYBER.01**, BUT Networks &amp; Telecommunications (cybersecurity track), 2025–2026. · 🎬 [Demo video](https://www.youtube.com/watch?v=jIlEiJvH2Xs)
+> 🎓 University project — **SAÉ 4.CYBER.01**, BUT Networks &amp; Telecommunications (cybersecurity track), 2025–2026. ·
 
 ## ✨ Features
 
