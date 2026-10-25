@@ -149,12 +149,8 @@ Project by **Mohammed Al-Abri**, Emeer, Hazeem, Warid, Rayan, Fadlan.
 
 - 📄 [Technical report](docs/rapport-technique.pdf)
 - 🎤 [Presentation slides](docs/presentation-soutenance.pdf)
-- 🎬 [Demo video](https://www.youtube.com/watch?v=jIlEiJvH2Xs)
 
-## ⚖️ Responsible use
 
-This tool must be used **only against targets you own or are explicitly authorized to test**. Unauthorized scanning is illegal in most jurisdictions. The authors accept no liability for misuse.
 
-## 📄 License
 
-Distributed under the **MIT** license — see [LICENSE](LICENSE).
+
